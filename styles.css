@@ -1,100 +1,99 @@
-/* Set up the container for the video */
-.vid-container {
-  margin-top: 50px;
-  width: 80%;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Style the video */
-video {
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.vid-container {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  overflow: hidden;
+  position: fixed;
+  z-index: -1;
+}
+
+.vid-container video {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
 }
 
-/* Set up the container for the audio player */
 .player-container {
-  margin-top: 20px;
-  text-align: center;
+  display: none;
 }
 
-/* Style the sound picker */
 .sound-picker {
-  margin-top: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .sound-picker button {
-  background-color: #fff;
+  margin: 0 10px;
+  font-size: 18px;
+  padding: 10px 20px;
   border: none;
-  color: #333;
-  padding: 8px 16px;
-  margin: 0 4px;
+  border-radius: 20px;
+  background-color: #ffffff;
   cursor: pointer;
-  border-radius: 4px;
 }
 
 .sound-picker button.active {
-  background-color: #333;
-  color: #fff;
+  background-color: #003f5c;
+  color: #ffffff;
 }
 
-/* Style the time select buttons */
-#time-select {
-  margin-top: 20px;
-  text-align: center;
+.time-select {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-#time-select button {
-  background-color: #fff;
+.time-select button {
+  margin: 0 10px;
+  font-size: 18px;
+  padding: 10px 20px;
   border: none;
-  color: #333;
-  padding: 8px 16px;
-  margin: 0 4px;
+  border-radius: 20px;
+  background-color: #ffffff;
   cursor: pointer;
-  border-radius: 4px;
 }
 
-#time-select button.active {
-  background-color: #333;
-  color: #fff;
+.time-select button.active {
+  background-color: #003f5c;
+  color: #ffffff;
 }
 
-/* Style the time display */
 .time-display {
-  margin-top: 20px;
-  font-size: 48px;
-  text-align: center;
+  margin-bottom: 20px;
+  font-size: 72px;
+  color: #003f5c;
 }
 
-/* Style the play/pause button */
-.play {
-  width: 80px;
-  height: 80px;
-  background-color: #333;
-  color: #fff;
+#play-pause {
+  width: 100px;
+  height: 100px;
   border: none;
   border-radius: 50%;
-  font-size: 48px;
-  margin: 0 auto;
-  display: block;
+  background-color: #ffffff;
+  background-image: url('play.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
-.play:before {
-  content: "\f04b";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
-.pause:before {
-  content: "\f04c";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+#play-pause.play {
+  background-image: url('pause.svg');
 }

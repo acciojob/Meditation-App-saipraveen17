@@ -1,1 +1,100 @@
-/*  your css code here. If applicable */
+/* Set up the container for the video */
+.vid-container {
+  margin-top: 50px;
+  width: 80%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* Style the video */
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Set up the container for the audio player */
+.player-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Style the sound picker */
+.sound-picker {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sound-picker button {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  padding: 8px 16px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sound-picker button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the time select buttons */
+#time-select {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#time-select button {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  padding: 8px 16px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#time-select button.active {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the time display */
+.time-display {
+  margin-top: 20px;
+  font-size: 48px;
+  text-align: center;
+}
+
+/* Style the play/pause button */
+.play {
+  width: 80px;
+  height: 80px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 48px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+
+.play:before {
+  content: "\f04b";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.pause:before {
+  content: "\f04c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
